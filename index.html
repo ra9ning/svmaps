@@ -3,11 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test roflcopter</title>
+    <title>sv maps perchance</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    test test rah rah rah
+    <div class="parent">
+        <div class="header">
+            simply vanilla mapart index
+        </div>
+        <div class="subtitle">
+            maintained by rain.ing
+        </div>
+
+        <!-- Filter by creator -->
+        <input type="text" id="creatorFilter" onkeyup="filterByCreator()" placeholder="Filter by artist...">
+        <table id="imageTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Mapart</th>
+                <th>Artists</th>
+                <th>Notes</th>
+                <!-- <th onclick="sortTableByDate()">Date Created</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>日枝 鳥居 - 君の名は</td>
+                <td><img src="px/日枝 鳥居 - 君の名は.png" alt="日枝 鳥居 - 君の名は" width="100" onclick="openModal(this)"></td>
+                <td data-creators="jansport101, ripNameWasTaken">jansport101 , ripNameWasTaken</td>
+                <td>4x4 non staircased</td>
+                <!-- <td data-date="2022-01-01">January 1, 2022</td> -->
+              </tr>
+              <tr>
+                <td>Rayquaza & & Pikachu</td>
+                <td><img src="px/Rayquaza & & Pikachu.png" alt="Rayquaza & & Pikachu" width="100" onclick="openModal(this)"></td>
+                <td data-creators="Glesias">Glesias</td>
+                <td>2x1 non staircased</td>
+
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+          
+        <!-- Modal to display the enlarged image -->
+        <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+        </div>
+          
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
