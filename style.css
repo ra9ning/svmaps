@@ -1,53 +1,47 @@
 body{
-    background-image: url(https://images.hdqwalls.com/download/simple-subtle-abstract-dark-minimalism-4k-u9-1360x768.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: top;
+  background-image: url(https://images.hdqwalls.com/download/simple-subtle-abstract-dark-minimalism-4k-u9-1360x768.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
 }
 
 .parent {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;    /* Center items horizontally */
-    margin: 0;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;    /* Center items horizontally */
+  margin: 0;
+  overflow: hidden;
 }
 
 .header {
-    color: aliceblue;
-    font-size: 5vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: aliceblue;
+  font-size: 5vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .subtitle {
-    color: aliceblue;
-    font-size: 1vw;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 10px;
-    margin-bottom: 50px;
+  color: aliceblue;
+  font-size: 1vw;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
-table {
-  width: 80%;
-  border-collapse: collapse;
+/* Moves "footer" to the top, cuz footer is actually where category specific search inputs are located */
+tfoot {
+  display: table-header-group;
 }
 
-th, td {
-  border: none;
-  padding: 8px;
-  text-align: left;
-  color:beige;
+/* Bottom white line below all mapart rows */
+table.dataTable {
+  border-bottom: 2px solid white !important;
 }
 
-th {
-  cursor: pointer;
+/* Top white line right above category specific search inputs, and removes barely visible outline around order a-z/z-a buttons/area */
+table.dataTable thead th {
+  border-bottom: 2px solid white !important;
+  outline: none !important;
 }
-
-img {
-  max-width: 100px;
-  height: auto;
-}
-
 
 /* The Modal (background) */
 .modal {
