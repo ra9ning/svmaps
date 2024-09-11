@@ -4,3 +4,5 @@ im makin a website to display a comprehensive list of the maparts on the simply 
 ## and this is pok
 
 addin some changes. starting by introducing jQuery DataTable change :p 
+
+just did first deployment, looks like theres a background img bug (background img not fully showing), see if i can fix.
