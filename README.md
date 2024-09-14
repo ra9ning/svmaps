@@ -5,4 +5,6 @@ im makin a website to display a comprehensive list of the maparts on the simply 
 
 addin some changes. starting by introducing jQuery DataTable change :p 
 
-just did first deployment, looks like theres a background img bug (background img not fully showing), see if i can fix.
+just did first deployment, looks like theres a background img bug (background img not fully showing), see if i can fix. edit: tried one fix, didnt work, gonna try again :DDDDD
+
+also another fix to do (tho im so tired of tryna fix in a good way), is name header not being updated to say like "& more" on inital mobile load. a cheap solution like changing its text via css works but rn cant find anything too optimal.

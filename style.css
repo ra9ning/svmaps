@@ -3,7 +3,7 @@ body{
   background-size: cover;
   background-attachment: fixed;
   background-position: top;
-  height: 100%; /* Fixes background img cutting off after like body would end normally */
+  height: 100vh; /* Fixes background img cutting off after like body would end normally */
 }
 
 .parent {
