@@ -54,11 +54,12 @@ $(document).ready(function() { // Wait for HTML to load
                           }
                       });
               });
-        },
+
+        },      
       });
-      // Attach the 'responsive-resize' event handler to the DataTable instance
+
+      // Add the 'responsive-resize' event for when a column is hidden/revealed (i forgor if this actually what triggers it)
       table.on('responsive-resize', function(e, datatable, columns) {
-        console.log(columns); // This should now log the columns array
 
         // Check if any columns are hidden (false) & do some basic adjustment to name header
         if (columns.includes(false)) {
@@ -66,7 +67,7 @@ $(document).ready(function() { // Wait for HTML to load
         } else {
           $('#nameHeader').text('Name');
         }
-      });
+      })
     })
     .catch(error => console.log('Error fetching JSON:', error));
 });
