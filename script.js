@@ -4,8 +4,9 @@ $(document).ready(function() { // Wait for HTML to load
   fetch('data.json')
     .then(response => response.json())
     .then(jsonData => {
-      $('#mapartTable').DataTable({
+      var table = $('#mapartTable').DataTable({
         data: jsonData,
+        responsive: true,
         columns: [ // Formatting each json element from json data to be a new row/mapart entry
           { data: 'name' },
           { data: 'mapart', render: function(data, type, row) {
@@ -53,6 +54,17 @@ $(document).ready(function() { // Wait for HTML to load
                           }
                       });
               });
+        },
+      });
+      // Attach the 'responsive-resize' event handler to the DataTable instance
+      table.on('responsive-resize', function(e, datatable, columns) {
+        console.log(columns); // This should now log the columns array
+
+        // Check if any columns are hidden (false) & do some basic adjustment to name header
+        if (columns.includes(false)) {
+          $('#nameHeader').text('Name (& more)');
+        } else {
+          $('#nameHeader').text('Name');
         }
       });
     })

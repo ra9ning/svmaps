@@ -16,14 +16,21 @@ body{
 .header {
   color: aliceblue;
   font-size: 5vw;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
 .subtitle {
   color: aliceblue;
   font-size: 1vw;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
   margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+/* Width styling n etc for the container DataTable in */
+.table-container {
+  width: 80%;
+  overflow-x: auto;
   margin-bottom: 50px;
 }
 
@@ -41,6 +48,24 @@ table.dataTable {
 table.dataTable thead th {
   border-bottom: 2px solid white !important;
   outline: none !important;
+}
+
+/* Makes the dropdown arrow see other column info about mapart fully white, instead of black default in dark mode */
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
+    border-left:10px solid rgba(255, 255, 255, 1);
+}
+
+table.dataTable.dtr-inline.collapsed>tbody>tr.dtr-expanded>td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed>tbody>tr.dtr-expanded>th.dtr-control:before {
+  border-top:10px solid rgba(255, 255, 255, 1);
+}
+
+/* Makes the next/previous page buttons where there isnt a page to go grey instead of pure black */
+div.dt-container .dt-paging .dt-paging-button.disabled,
+div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+div.dt-container .dt-paging .dt-paging-button.disabled:active {
+  color:rgba(100, 100, 100, 1) !important;
 }
 
 /* The Modal (background) */
@@ -93,4 +118,23 @@ table.dataTable thead th {
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* Adjust dip for smaller screens/mobile */
+@media (max-width: 768px) {
+
+   /* Full width on mobile */
+  .table-container {
+      width: 100%;
+  }
+
+  /* Without this subtitle (Maintained by raining text) is like ridiculously small */
+  .subtitle {
+      font-size: 4vw;
+  }
+
+  /* Reduce image/mapart size */
+  #mapartTable img {
+      width: 80px;
+  }
 }

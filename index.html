@@ -7,6 +7,7 @@
     <meta name="color-scheme" content="dark">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.5/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.3/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,10 +19,12 @@
             maintained by rain.ing
         </div>
 
-          <table id="mapartTable" class="compact" style="width:80%">
+
+        <div class="table-container">
+          <table id="mapartTable" class="compact">
               <thead>
                 <tr>
-                  <th>Name</th>
+                  <th id="nameHeader">Name</th>
                   <th>Mapart</th>
                   <th>Artists</th>
                   <th>Notes</th>
@@ -39,6 +42,7 @@
                 <!-- Maparts' table/data will be populated by JS -->
               </tbody>
           </table>
+        </div>
 
 
         <!-- Modal for enlarged image -->
@@ -51,12 +55,13 @@
 
     <div class="poks-message" style="float:right;">
       <span>pok wuz here</span>
-      <img src="https://minecraft.wiki/images/EntitySprite_pufferfish.png?08be3" alt="fardpic">
+      <img src="https://minecraft.wiki/images/EntitySprite_pufferfish.png?08be3" alt="fardpic"> <!-- hydration check! -->
   </div>
 
-    <!-- Include jQuery and DataTables libraries -->
+    <!-- Include jQuery & DataTables (main & responsive) libraries -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/2.1.5/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.3/js/dataTables.responsive.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
