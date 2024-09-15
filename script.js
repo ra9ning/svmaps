@@ -54,9 +54,13 @@ $(document).ready(function() { // Wait for HTML to load
                           }
                       });
               });
-
         },      
-      });
+      }); 
+
+      // This (somehow) refreshes the DatTable columns to properly return which ones are hidden/visible.
+      // This needed as without it when site initally loaded/refreshed hidden columns will still be stated as visible by responsive-resize n other api calls.
+      table.column(3).visible(false, false);
+      table.column(3).visible(true, false);
 
       // Add the 'responsive-resize' event for when a column is hidden/revealed (i forgor if this actually what triggers it)
       table.on('responsive-resize', function(e, datatable, columns) {
