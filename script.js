@@ -54,8 +54,8 @@ $(document).ready(function() { // Wait for HTML to load
                           }
                       });
               });
-        },      
-      }); 
+        },
+      });
 
       // This (somehow) refreshes the DatTable columns to properly return which ones are hidden/visible.
       // This needed as without it when site initally loaded/refreshed hidden columns will still be stated as visible by responsive-resize n other api calls.
@@ -71,6 +71,7 @@ $(document).ready(function() { // Wait for HTML to load
         } else {
           $('#nameHeader').text('Name');
         }
+
       })
     })
     .catch(error => console.log('Error fetching JSON:', error));
